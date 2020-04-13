@@ -7,7 +7,7 @@ let port= 2112;
 app.use(express.json());
 // database setup
 const mongoose = require('mongoose');
-const mongoDB ='// mongodb+srv://student:C0d3Cr3w@cluster0-sq2pi.mongodb.net/cs_database?retryWrites=true&w=majority';
+const mongoDB ='mongodb+srv://student:Datwho@91@cluster0-sq2pi.mongodb.net/cs_database?retryWrites=true&w=majority';
 
 //connect to the database
 console.log(`connecting to mongo at ${mongoDB}`); //sanity check
@@ -17,8 +17,8 @@ let db = mongoose.connection
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 //mount the routes
-// let api = require('./routes/api.js')
-// app.use('/api', api)
+let api = require('./routes/api')
+app.use('/api', api)
 
 
 app.listen(port, ()=>{

@@ -1,7 +1,7 @@
 // mongodb+srv://student:C0d3Cr3w@cluster0-sq2pi.mongodb.net/cs_database?retryWrites=true&w=majority
 
 let express=require('express')
-let router =express.Router
+let router =express.Router();
 router.use(express.json());
 //get reference to the data model
 let ProductCollection = require('../models/ProductSchema');
